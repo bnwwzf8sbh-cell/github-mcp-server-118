@@ -1,0 +1,26 @@
+{
+  "annotations": {
+    "idempotentHint": false,
+    "readOnlyHint": false,
+    "title": "Create Note"
+  },
+  "description": "Create a new note with a title and content",
+  "inputSchema": {
+    "properties": {
+      "content": {
+        "description": "The body content of the note",
+        "type": "string"
+      },
+      "title": {
+        "description": "The title of the note",
+        "type": "string"
+      }
+    },
+    "required": [
+      "title",
+      "content"
+    ],
+    "type": "object"
+  },
+  "name": "create_note"
+}
