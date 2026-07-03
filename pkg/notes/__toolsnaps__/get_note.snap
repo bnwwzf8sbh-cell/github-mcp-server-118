@@ -1,0 +1,21 @@
+{
+  "annotations": {
+    "idempotentHint": false,
+    "readOnlyHint": true,
+    "title": "Get Note"
+  },
+  "description": "Get a note by ID",
+  "inputSchema": {
+    "properties": {
+      "id": {
+        "description": "The ID of the note to retrieve",
+        "type": "string"
+      }
+    },
+    "required": [
+      "id"
+    ],
+    "type": "object"
+  },
+  "name": "get_note"
+}

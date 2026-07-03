@@ -1,0 +1,21 @@
+{
+  "annotations": {
+    "idempotentHint": false,
+    "readOnlyHint": false,
+    "title": "Delete Note"
+  },
+  "description": "Delete a note by ID",
+  "inputSchema": {
+    "properties": {
+      "id": {
+        "description": "The ID of the note to delete",
+        "type": "string"
+      }
+    },
+    "required": [
+      "id"
+    ],
+    "type": "object"
+  },
+  "name": "delete_note"
+}
