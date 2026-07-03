@@ -39,7 +39,7 @@ func NewMemoryStore() *MemoryStore {
 	}
 }
 
-// List returns all notes in insertion order.
+// List returns all notes in unspecified order.
 func (s *MemoryStore) List() []*Note {
 	s.mu.RLock()
 	defer s.mu.RUnlock()

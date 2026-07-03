@@ -75,6 +75,8 @@ func GetNote(store Store) inventory.ServerTool {
 			if err := json.Unmarshal(req.Params.Arguments, &args); err != nil {
 				return utils.NewToolResultError(fmt.Sprintf("invalid arguments: %s", err)), nil
 			}
+			// Validate required fields defensively: the MCP SDK does not enforce
+			// JSON Schema constraints on the server side.
 			if args.ID == "" {
 				return utils.NewToolResultError("id is required"), nil
 			}
@@ -127,6 +129,8 @@ func CreateNote(store Store) inventory.ServerTool {
 			if err := json.Unmarshal(req.Params.Arguments, &args); err != nil {
 				return utils.NewToolResultError(fmt.Sprintf("invalid arguments: %s", err)), nil
 			}
+			// Validate required fields defensively: the MCP SDK does not enforce
+			// JSON Schema constraints on the server side.
 			if args.Title == "" {
 				return utils.NewToolResultError("title is required"), nil
 			}
@@ -174,6 +178,8 @@ func DeleteNote(store Store) inventory.ServerTool {
 			if err := json.Unmarshal(req.Params.Arguments, &args); err != nil {
 				return utils.NewToolResultError(fmt.Sprintf("invalid arguments: %s", err)), nil
 			}
+			// Validate required fields defensively: the MCP SDK does not enforce
+			// JSON Schema constraints on the server side.
 			if args.ID == "" {
 				return utils.NewToolResultError("id is required"), nil
 			}
